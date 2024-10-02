@@ -1,0 +1,14 @@
+{
+  "name": "my-bootstrap-project",
+  "version": "1.0.0",
+  "description": "A project using Bootstrap locally",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.0"
+  }
+}

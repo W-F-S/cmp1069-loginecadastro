@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG-Cinema - Sessões</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        .filme img {
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header class="mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">SG-Cinema</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./cadastro_filmes.html">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./cadastro_sessoes.html">Sessões</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./cadastro_cliente.html">Cliente</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+    </header>
+
+    <main class="container">
+        <h2 class="text-center mb-4">Sessões Disponíveis</h2>
+
+        <!-- Filtro de Sessões -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <label for="data">Data:</label>
+                <input type="date" id="data" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <label for="genero">Gênero:</label>
+                <select id="genero" class="form-control">
+                    <option value="todos">Todos</option>
+                    <option value="acao">Ação</option>
+                    <option value="comedia">Comédia</option>
+                    <option value="drama">Drama</option>
+                    <!-- Adicione mais opções de gênero -->
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="classificacao">Classificação:</label>
+                <select id="classificacao" class="form-control">
+                    <option value="todas">Todas</option>
+                    <option value="livre">Livre</option>
+                    <option value="12">12 anos</option>
+                    <option value="16">16 anos</option>
+                    <option value="18">18 anos</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario" class="form-control">
+            </div>
+        </div>
+
+        <!-- Listagem de Sessões -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card filme">
+                    <img src="../imgs/filme_1.jpg" class="card-img-top" alt="Imagem Filme 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Filme 1</h5>
+                        <p class="card-text"><strong>Horário:</strong> 15:00</p>
+                        <p class="card-text"><strong>Sala:</strong> Sala 1</p>
+                        <p class="card-text text-danger"><strong>Ingressos restantes:</strong> 20</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repita para outras sessões -->
+        </div>
+    </main>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

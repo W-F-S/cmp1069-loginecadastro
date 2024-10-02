@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SG-Cinema - Login</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="mb-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">SG-Cinema</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main class="container login-container">
+        <h2 class="text-center mb-4">Login</h2>
+        <form>
+            <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input type="email" name='email_login' class="form-control" id="email-login" placeholder="Digite seu email" required>
+            </div>
+            <div class="form-group mb-4">
+                <label for="password">Senha</label>
+                <input type="password" name='senha_login' class="form-control" id="password-login" placeholder="Digite sua senha" required>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn js-login btn-primary">Login</button>
+                <a href="./cadastro_cliente.html" class="btn js-signUp btn-secondary" data-toggle="modal" data-target="#registerModal">Cadastro</a>
+            </div>
+        </form>
+    </main>
+
+
+       <!-- Modal de Cadastro -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroModalLabel">Cadastro de Usuário</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group mb-3">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" name='' class="form-control" id="nome" placeholder="Digite seu nome completo" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="emailCadastro">Email</label>
+                            <input type="email" name='email_cadastro' class="form-control" id="emailCadastro" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="senhaCadastro">Senha</label>
+                            <input type="password" class="form-control" id="senhaCadastro" placeholder="Digite sua senha" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="confirmSenha">Confirme a Senha</label>
+                            <input type="password" class="form-control" id="confirmSenha" placeholder="Confirme sua senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="./logic.js"></script>
+</body>
+</html>
