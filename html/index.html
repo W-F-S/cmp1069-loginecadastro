@@ -33,14 +33,14 @@
             </div>
             <div class="d-flex justify-content-between">
                 <button type="submit" class="btn js-login btn-primary">Login</button>
-                <a href="./cadastro_cliente.html" class="btn js-signUp btn-secondary" data-toggle="modal" data-target="#registerModal">Cadastro</a>
+                <!-- Updated Modal Trigger Button -->
+                <a href="#" class="btn js-signUp btn-secondary" data-bs-toggle="modal" data-bs-target="#registerModal">Cadastro</a>
             </div>
         </form>
     </main>
 
 
-       <!-- Modal de Cadastro -->
-    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+    <div class="modal fade" id="registerModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -50,22 +50,22 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group mb-3">
-                            <label for="nome">Nome Completo</label>
-                            <input type="text" name='' class="form-control" id="nome" placeholder="Digite seu nome completo" required>
+                            <label>Nome Completo</label>
+                            <input type="text" class="form-control" id="nome-cadastro" placeholder="Digite seu nome completo" required>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="emailCadastro">Email</label>
+                            <label>Email</label>
                             <input type="email" name='email_cadastro' class="form-control" id="emailCadastro" placeholder="Digite seu email" required>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="senhaCadastro">Senha</label>
-                            <input type="password" class="form-control" id="senhaCadastro" placeholder="Digite sua senha" required>
+                            <label>Senha</label>
+                            <input type="password" class="form-control" id="senha-cadastro" placeholder="Digite sua senha" required>
                         </div>
                         <div class="form-group mb-3">
-                            <label for="confirmSenha">Confirme a Senha</label>
-                            <input type="password" class="form-control" id="confirmSenha" placeholder="Confirme sua senha" required>
+                            <label>Confirme a Senha</label>
+                            <input type="password" class="form-control" id="confirm-senha" placeholder="Confirme sua senha" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="submit" id='createNewUser' class="btn btn-primary">Cadastrar</button>
                     </form>
                 </div>
             </div>
@@ -73,6 +73,5 @@
     </div>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="./logic.js"></script>
 </body>
 </html>
